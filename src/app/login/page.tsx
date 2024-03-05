@@ -65,11 +65,6 @@ export default function Home() {
           </div>
           <button
             className="bg-brand text-white w-full text-sm py-3 rounded-md cursor-default hover:brightness-95"
-            // Console log all input.
-            onClick={(e) => {
-              e.preventDefault();
-              console.log(e.target);
-            }}
             type="submit"
           >
             Sign In
