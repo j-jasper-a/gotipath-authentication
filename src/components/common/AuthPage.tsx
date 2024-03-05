@@ -9,13 +9,14 @@ const AuthPage = ({ children }: Props) => {
   return (
     <div className="grid md:grid-cols-2 h-screen">
       <div className="flex flex-col justify-between items-center p-6">
-        <Image
-          className="self-start w-40 h-auto"
-          src={"/assets/images/logo-full.svg"}
-          alt="Logo"
-          width={200}
-          height={200}
-        />
+        <Link className="self-start w-40 h-auto" href={"/"}>
+          <Image
+            src={"/assets/images/logo-full.svg"}
+            alt="Logo"
+            width={200}
+            height={200}
+          />
+        </Link>
         {children}
         <p className="text-sm text-neutral-600">
           By continuing, you agree to the{" "}
