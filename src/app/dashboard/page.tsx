@@ -1,9 +1,17 @@
-import Image from "next/image";
+// "use client";
 
-export default function Home() {
+import { getServerSession } from "next-auth";
+import { signOut } from "next-auth/react";
+import Image from "next/image";
+import { options } from "../api/auth/[...nextauth]/options";
+import SignOutButton from "@/components/common/SignOutButton";
+
+export default async function Home() {
+  const session = await getServerSession(options);
+
   return (
     <div className="h-screen flex flex-col items-center justify-center p-8 gap-8">
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 items-center">
         <p className="text-2xl font-medium">
           This dashboard is{" "}
           <span className="font-bold text-green-500">protected</span>.
@@ -19,15 +27,12 @@ export default function Home() {
         </div>
         <p className="font-medium">
           You are successfully signed in,{" "}
-          <span className="text-brand">John Smith</span>.
+          <span className="text-brand">{session?.user?.name}</span>.
         </p>
       </div>
-      <button
-        className="bg-brand text-white w-full text-sm py-3 rounded-md cursor-default hover:brightness-95 max-w-[400px]"
-        type="submit"
-      >
-        Sign Out
-      </button>
+      <div className="w-full max-w-[400px]">
+        <SignOutButton />
+      </div>
     </div>
   );
 }

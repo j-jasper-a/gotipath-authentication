@@ -75,7 +75,7 @@ export default function Home() {
           <p className="text-sm text-neutral-600 font-medium">or</p>
           <hr className="w-full" />
         </div>
-        <LoginProviders variant="register" />
+        <LoginProviders variant="login" />
       </div>
     </AuthPage>
   );

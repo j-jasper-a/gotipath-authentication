@@ -1,3 +1,5 @@
+import { signIn } from "next-auth/react";
+import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
@@ -9,9 +11,17 @@ const LoginProviders = ({ variant = "login" }: Props) => {
     <div className="flex flex-col items-center gap-2">
       <p>Sign in with</p>
       <div className="flex gap-4">
-        <p className="border-neutral-200 shadow-sm border-[1px] flex items-center justify-center w-10 h-10 rounded-md">
-          G
-        </p>
+        <button
+          className="border-neutral-200 shadow-sm border-[1px] flex items-center justify-center w-10 h-10 bg-green-100 rounded-md"
+          onClick={() => signIn("github", { callbackUrl: "/dashboard" })}
+        >
+          <Image
+            src={"/assets/images/icons/github-icon.svg"}
+            alt="GitHub icon"
+            width={24}
+            height={24}
+          />
+        </button>
         <p className="border-neutral-200 shadow-sm border-[1px] flex items-center justify-center w-10 h-10 rounded-md">
           G
         </p>
