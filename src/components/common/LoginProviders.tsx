@@ -12,7 +12,7 @@ const LoginProviders = ({ variant = "login" }: Props) => {
       <p>Sign in with</p>
       <div className="flex gap-4">
         <button
-          className="border-neutral-200 shadow-sm border-[1px] flex items-center justify-center w-10 h-10 bg-green-100 rounded-md"
+          className="flex h-10 w-10 items-center justify-center rounded-md border-[1px] border-neutral-200 bg-green-100 shadow-sm"
           onClick={() => signIn("github", { callbackUrl: "/dashboard" })}
         >
           <Image
@@ -22,17 +22,17 @@ const LoginProviders = ({ variant = "login" }: Props) => {
             height={24}
           />
         </button>
-        <p className="border-neutral-200 shadow-sm border-[1px] flex items-center justify-center w-10 h-10 rounded-md">
+        <p className="flex h-10 w-10 items-center justify-center rounded-md border-[1px] border-neutral-200 shadow-sm">
           G
         </p>
-        <p className="border-neutral-200 shadow-sm border-[1px] flex items-center justify-center w-10 h-10 rounded-md">
+        <p className="flex h-10 w-10 items-center justify-center rounded-md border-[1px] border-neutral-200 shadow-sm">
           S
         </p>
-        <p className="border-neutral-200 shadow-sm border-[1px] flex items-center justify-center w-10 h-10 rounded-md">
+        <p className="flex h-10 w-10 items-center justify-center rounded-md border-[1px] border-neutral-200 shadow-sm">
           O
         </p>
       </div>
-      <p className="flex gap-2 items-center">
+      <p className="flex items-center gap-2">
         {variant === "login"
           ? "New to Gotipath?"
           : "Already a Gotipath member?"}{" "}

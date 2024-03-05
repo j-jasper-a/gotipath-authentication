@@ -7,9 +7,9 @@ type Props = {
 
 const AuthPage = ({ children }: Props) => {
   return (
-    <div className="grid md:grid-cols-2 h-screen">
-      <div className="flex flex-col justify-between items-center p-6">
-        <Link className="self-start w-40 h-auto" href={"/"}>
+    <div className="grid md:h-screen lg:grid-cols-2">
+      <div className="flex flex-col items-center justify-between gap-4 p-6">
+        <Link className="h-auto w-40 self-start" href={"/"}>
           <Image
             src={"/assets/images/logo-full.svg"}
             alt="Logo"
@@ -29,9 +29,9 @@ const AuthPage = ({ children }: Props) => {
           </Link>
         </p>
       </div>
-      <div className="hidden md:block w-full h-full overflow-hidden">
+      <div className="hidden h-full w-full overflow-hidden lg:block">
         <Image
-          className="w-full h-full object-cover object-center"
+          className="h-full w-full object-cover object-center"
           src={"/assets/images/auth-graphic.webp"}
           alt="Authentication Graphic"
           width={1439}

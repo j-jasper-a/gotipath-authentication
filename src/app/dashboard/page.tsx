@@ -10,15 +10,15 @@ export default async function Home() {
   const session = await getServerSession(options);
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center p-8 gap-8">
-      <div className="flex flex-col gap-8 items-center">
+    <div className="flex h-screen flex-col items-center justify-center gap-8 p-8">
+      <div className="flex flex-col items-center gap-8">
         <p className="text-2xl font-medium">
           This dashboard is{" "}
           <span className="font-bold text-green-500">protected</span>.
         </p>
         <div>
           <Image
-            className="w-full h-full object-cover object-center"
+            className="h-full w-full object-cover object-center"
             src={"/assets/images/dashboard-graphic.svg"}
             alt="A photo of a car's dashboard"
             width={800}

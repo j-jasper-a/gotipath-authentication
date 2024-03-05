@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <AuthPage>
       {" "}
-      <div className="w-full max-w-[400px] flex flex-col gap-4">
+      <div className="flex w-full max-w-[400px] flex-col gap-4">
         <Image
-          className="shadow-md rounded-md overflow-hidden"
+          className="overflow-hidden rounded-md shadow-md"
           src={"/assets/images/icons/auth-icon.svg"}
           alt="Logo"
           width={40}
@@ -24,12 +24,12 @@ export default function Home() {
           </p>
         </div>
         <form className="flex flex-col gap-4">
-          <div className="flex flex-col text-sm gap-2">
+          <div className="flex flex-col gap-2 text-sm">
             <label className="font-medium" htmlFor="accounttype">
               Select Account Type
             </label>
-            <div className="grid gap-2 grid-cols-2 bg-neutral-100 p-1 items-center justify-center rounded-md">
-              <div className="flex gap-2 bg-white p-2 rounded-md justify-center items-center">
+            <div className="grid grid-cols-2 items-center justify-center gap-2 rounded-md bg-neutral-100 p-1">
+              <div className="flex items-center justify-center gap-2 rounded-md bg-white p-2">
                 <Image
                   src={"/assets/images/icons/personal-icon.svg"}
                   alt="Personal icon"
@@ -38,7 +38,7 @@ export default function Home() {
                 />
                 <p className="text-sm font-bold">Personal</p>
               </div>
-              <div className="flex gap-2 justify-center items-center">
+              <div className="flex items-center justify-center gap-2">
                 <Image
                   src={"/assets/images/icons/corporate-icon.svg"}
                   alt="Corporate icon"
@@ -49,20 +49,20 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col text-sm gap-2">
+          <div className="flex flex-col gap-2 text-sm">
             <label className="font-medium" htmlFor="name">
               Name
             </label>
             <div className="grid grid-cols-2 gap-2">
               <input
-                className="border-[1px] border-neutral-200 py-2 px-2 rounded-md focus:ring-0 focus:outline-none focus:border-brand"
+                className="rounded-md border-[1px] border-neutral-200 px-2 py-2 focus:border-brand focus:outline-none focus:ring-0"
                 type="text"
                 name="firstname"
                 id="firstname"
                 placeholder="First Name"
               />
               <input
-                className="border-[1px] border-neutral-200 py-2 px-2 rounded-md focus:ring-0 focus:outline-none focus:border-brand"
+                className="rounded-md border-[1px] border-neutral-200 px-2 py-2 focus:border-brand focus:outline-none focus:ring-0"
                 type="text"
                 name="lastname"
                 id="lastname"
@@ -70,24 +70,24 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="flex flex-col text-sm gap-2">
+          <div className="flex flex-col gap-2 text-sm">
             <label className="font-medium" htmlFor="email">
               Email
             </label>
             <input
-              className="border-[1px] border-neutral-200 py-2 px-2 rounded-md focus:ring-0 focus:outline-none focus:border-brand"
+              className="rounded-md border-[1px] border-neutral-200 px-2 py-2 focus:border-brand focus:outline-none focus:ring-0"
               type="email"
               name="email"
               id="email"
               placeholder="Enter email address"
             />
           </div>
-          <div className="flex flex-col text-sm gap-2">
+          <div className="flex flex-col gap-2 text-sm">
             <label className="font-medium" htmlFor="password">
               Create a password
             </label>
             <input
-              className="border-[1px] border-neutral-200 py-2 px-2 rounded-md focus:ring-0 focus:outline-none focus:border-brand"
+              className="rounded-md border-[1px] border-neutral-200 px-2 py-2 focus:border-brand focus:outline-none focus:ring-0"
               type="password"
               name="password"
               id="password"
@@ -96,15 +96,15 @@ export default function Home() {
           </div>
           {/* Enter phone number. */}
           <button
-            className="bg-brand text-white w-full text-sm py-3 rounded-md cursor-default hover:brightness-95"
+            className="w-full cursor-default rounded-md bg-brand py-3 text-sm text-white hover:brightness-95"
             type="submit"
           >
             Sign Up
           </button>
         </form>
-        <div className="flex gap-4 items-center w-full">
+        <div className="flex w-full items-center gap-4">
           <hr className="w-full" />
-          <p className="text-sm text-neutral-600 font-medium">or</p>
+          <p className="text-sm font-medium text-neutral-600">or</p>
           <hr className="w-full" />
         </div>
         <LoginProviders variant="register" />
